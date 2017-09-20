@@ -1,0 +1,13 @@
+ html, body, #app{
+  background: linear-gradient(to bottom right,#7f3737,#2a2122);
+  height: 100%;
+  color: white;
+  padding: 20px;
+}
+
+li.movie-choice{
+  list-style-type: none;
+}
+.mobile{
+  text-align: center;
+}

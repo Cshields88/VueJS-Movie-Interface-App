@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue-Flix - Tutorial</title>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+
+	<!--  Starting point for VueFlix -->
+
+	<div id="app"> <!-- Where The Vue Instance is Mounted -->
+		<section>
+
+			<router-view></router-view><br>
+
+			<div class="hero-foot">
+				<div class="columns is-mobile">
+					<!-- Renders the list movieChoices using v-for -->
+					<div v-for="movieChoice in movieChoices" class="column"> 
+						<li class="movie-choice">
+							<img :src="`${movieChoice.smallImgSrc}`" class="desktop"/>
+							<p class="mobile">{{ movieChoice.subtitle }}</p>
+						</li>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<!--  All custom SCSS is laid out -->
+	<!--  Movies data store is prepared -->
+
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.7.0/vue-router.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
